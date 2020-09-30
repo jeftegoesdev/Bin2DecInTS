@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="Jefté Goes" content="" />
+    <title>Conversor de Binário para Decimal</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/floating-labels/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="floating-labels.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form class="form-signin">
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">
+          Conversor de Binário para Decimal
+        </h1>
+        <p>
+          Nesse exemplo é utilizado TypeScript e Bootstrap, informe o valor em
+          binário e clique no botão "Converter" para saber o resultado em
+          decimal.
+        </p>
+      </div>
+
+      <div class="form-label-group">
+        <input
+          type="number"
+          id="inputBinario"
+          class="form-control"
+          placeholder="Binário"
+          required
+          autofocus
+          maxlength="8"
+          onkeydown="return ( (event.keyCode==49) || (event.keyCode==48) ||
+                              (event.keyCode==96) || (event.keyCode==97) ) "
+        />
+        <label for="inputEmail">Binário</label>
+      </div>
+
+      <div class="form-label-group">
+        <input
+          type="text"
+          id="inputDecimal"
+          class="form-control"
+          placeholder="Decimal"
+          readonly
+        />
+        <label for="inputPassword">Resultado</label>
+      </div>
+
+      <button
+        class="btn btn-lg btn-primary btn-block"
+        type="button"
+        OnClick="inputDecimal.value = OnBin2Dec(inputBinario.value)"
+      >
+        Converter
+      </button>
+    </form>
+    <script src="bin2decin.js"></script>
+  </body>
+</html>
